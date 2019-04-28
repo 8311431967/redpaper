@@ -18,4 +18,13 @@
         #{id}
     </update>
 
+    <!-- 查询红包具体信息  悲观锁的实现方式for update -->
+    <select id="getRedPacketForUpdate" parameterType="long"
+            resultType="scau.redpaper.domain.RedPacket">
+        select
+        id, user_id as userId, amount, send_date as sendDate, total, unit_amount as unitAmount, stock, version, note
+        from
+        T_RED_PACKET
+        where id = #{id} for update
+    </select>
 </mapper>

@@ -26,4 +26,14 @@ public interface RedPacketMapper {
     public int decreaseRedPacket(Long id);
 
 
+    /**
+     * 获取红包信息. 悲观锁的实现方式
+     *
+     * @param id
+     *            --红包id
+     * @return 红包具体信息
+     */
+    public RedPacket getRedPacketForUpdate(Long id);
+
+
 }
