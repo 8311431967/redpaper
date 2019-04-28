@@ -15,7 +15,7 @@
                 $.post({
                     //请求抢id为1的红包
                     //根据自己请求修改对应的url和大红包编号
-                    url: "./userRedPacket/grapRedPacket?redPacketId=1&userId=" + i,
+                    url: "./userRedPacket/grapRedPacketForVersion?redPacketId=1&userId=" + i,
                     //成功后的方法
                     success: function (result) {
                     }
@@ -25,6 +25,6 @@
     </script>
 </head>
 <body>
-<h1>这是悲观锁版本</h1>
+<h1>这是乐观锁版本</h1>
 </body>
 </html>
